@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Scheduler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1>Any Time is Train Time</h1>
+            <p>Choo Choo. Chee Chee.</p>
+        </div>
+
+        <div class="container" style="border: solid thin lightgray; padding: 15px;">
+            <h2>Current Train Schedule</h2>
+
+            <div class="row" id="train-table">
+                <div class="col-sm-3" style="font-weight: bold">Train Name</div>
+                <div class="col-sm-3" style="font-weight: bold">Destination</div>
+                <div class="col-sm-2" style="font-weight: bold">Frequency (min)</div>
+                <div class="col-sm-2" style="font-weight: bold">Next Arrival</div>
+                <div class="col-sm-2" style="font-weight: bold">Minutes Away</div>
+
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-*-*"></div>
+                <div class="col-*-*"></div>
+                <div class="col-*-*"></div>
+            </div>
+            <hr>
+            <div class="row">
+            </div>
+        </div>
+        <br>
+
+        <div class="container" style="border: solid thin lightgray; padding: 15px">
+
+            <h2>Add Train</h2>
+
+            <form id="newTrain">
+                <div class="form-group">
+                    <label for="train-name">Train Name</label>
+                    <input type="text" class="form-control" id="train-name">
+                </div>
+
+                <div class="form-group">
+                    <label for="destination">Destination</label>
+                    <input type="text" class="form-control" id="destination">
+                </div>
+
+                <div class="form-group">
+                    <label for="first-train">First Train Time (HH:mm - Military Time)</label>
+                    <input type="text" class="form-control" id="first-train">
+                </div>
+
+                <div class="form-group">
+                    <label for="frequency">Frequency (min)</label>
+                    <input type="text" class="form-control" id="frequency">
+                </div>
+
+                <button type="button" class="btn btn-primary" id="form-submit">Submit</button>
+                <br>
+            </form>
+
+        </div>
+        <br>
+        <br>
+
+
+        <!-- <div class="container" style="border: solid thin lightgray; padding: 15px;">
+            <h2>Current Employees</h2>
+
+            <div class="row">
+                <div class="col-sm-3" style="font-weight: bold">Train Name</div>
+                <div class="col-sm-3" style="font-weight: bold">Destination</div>
+                <div class="col-sm-2" style="font-weight: bold">Frequency (min)</div>
+                <div class="col-sm-2" style="font-weight: bold">Next Arrival</div>
+                <div class="col-sm-2" style="font-weight: bold">Minutes Away</div>
+
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-*-*"></div>
+                <div class="col-*-*"></div>
+                <div class="col-*-*"></div>
+            </div>
+            <hr>
+            <div class="row">
+            </div>
+        </div> -->
+        <hr>
+
+    </div>
+    </div>
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
