@@ -1,1 +1,1 @@
-https://riddleparty.github.io/trainscheduler/
+https://riddlecodes.github.io/trainscheduler/
